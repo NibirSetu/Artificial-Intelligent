@@ -1,0 +1,25 @@
+Code: 
+
+animal(tiger).
+animal(cow).
+animal(lion).
+carnivore(lion).
+carnivore(cow).
+
+
+Result:
+
+?- animal(tiger).
+true.
+
+?- animal(cow), animal(tiger).
+true.
+
+?- animal(lion), carnivore(lion).
+true.
+
+?- animal(cow), carnivore(cow).
+true.
+
+?- animal(cow), carnivore(tiger).
+false.
